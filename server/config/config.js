@@ -19,7 +19,7 @@ let urlDB;
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/cafe';
 } else {
-    urlDB = 'mongodb+srv://mmarin:i4UoTcbV4Xk2a6vn@cluster0-bcx9f.azure.mongodb.net/cafe';
+    urlDB = process.env.MONGO_URI; //SE CAMBIA LA CADENA DE CONEXION POR VARIABLE DE ENTORNO CREADA EN HEROKU
 }
 
 process.env.URLDB = urlDB;
